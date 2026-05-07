@@ -158,12 +158,14 @@
 
 // როგორ ამოვიღოთ ბოლო ასობგერა: str[str.length - 1]
 
-// სტრინგის შებრუნება for-ით — ინდექსი მიდის ბოლოდან ნულამდე, თითო სიმბოლო ემატება ახალ სტრინგში
-let str = "giorgi";
-let answer = "";
-for (let i = str.length - 1; i >= 0; i--) {
-  answer = answer + str[i];
-}
-console.log(answer); // igroig
+// let str = "giorgi"
 
-// ========== სავარჯიშო დავალებები ==========
+// let answer = ""
+// for(let i = str.length-1;i>=0;i--){
+//     // console.log(i)
+//     // console.log(str[i])
+//     // answer += str[i]
+//     // answer = answer + str[i]
+// }
+
+// console.log(answer)
