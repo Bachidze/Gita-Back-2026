@@ -17,6 +17,10 @@ connectToMongo()
 app.use("/users",userRouter)
 app.use("/auth",authRouter)
 app.use("/posts",isAuth,postsRouter)
+
+
+
+
 app.get("/",(req,res) => {
     res.json({message:"წარმატებით დარესფონსდა"})
 })
