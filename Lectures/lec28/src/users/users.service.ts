@@ -18,7 +18,7 @@ export class UsersService {
     return createNewUser
   }
 
- async findAll() {
+  findAll() {
     return this.userModel.find()
   }
 
@@ -48,4 +48,13 @@ export class UsersService {
 
     return findUserAndDeleteById
   }
+
+
+  async addPost(userId,postId){
+   const updateUSer = await this.userModel.findByIdAndUpdate(userId,{$push:{posts:postId}})
+   return updateUSer
+  }
+
+
+
 }
