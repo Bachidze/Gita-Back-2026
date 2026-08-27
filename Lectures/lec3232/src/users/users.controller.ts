@@ -18,9 +18,11 @@ export class UsersController {
     return this.usersService.findOne(id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.usersService.update(id, updateUserDto);
+  @UseGuards(AuthGuard)
+  @Patch()
+  update(@Req() request, @Body() updateUserDto: UpdateUserDto) {
+    const userId = request.userId
+    return this.usersService.update(userId, updateUserDto);
   }
 
   @UseGuards(AuthGuard)
