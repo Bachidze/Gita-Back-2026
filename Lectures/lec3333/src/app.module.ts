@@ -8,7 +8,10 @@ import { AuthModule } from './auth/auth.module';
 import { PostsModule } from './posts/posts.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({isGlobal:true}),MongooseModule.forRoot(process.env.MONGO_URI!),UsersModule, AuthModule, PostsModule],
+  imports: [
+    ConfigModule.forRoot({isGlobal:true}),
+    MongooseModule.forRoot(process.env.MONGO_URI!),
+    UsersModule, AuthModule, PostsModule],
   controllers: [AppController],
   providers: [AppService],
 })

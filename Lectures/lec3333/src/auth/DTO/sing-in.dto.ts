@@ -1,11 +1,14 @@
+import { ApiProperty } from "@nestjs/swagger"
 import {IsEmail, IsNotEmpty, IsString, Length} from "class-validator"
 export class SignInDto {
+  @ApiProperty({ example: 'giorgi@example.com', description: 'რეგისტრირებული ელფოსტა' })
   @IsNotEmpty()
   @IsString()
   @IsEmail()
   email!:string
 
 
+  @ApiProperty({ example: 'secret123', minLength: 6, maxLength: 20, description: 'პაროლი' })
   @IsNotEmpty()
   @IsString()
   @Length(6,20)
