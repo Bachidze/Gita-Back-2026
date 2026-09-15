@@ -1,0 +1,20 @@
+{
+  "name": "lec3434",
+  "version": "1.0.0",
+  "description": "Apollo Server GraphQL API with in-memory users and posts",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch main.js"
+  },
+  "keywords": [
+    "graphql",
+    "apollo-server"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^5.0.0",
+    "graphql": "^16.11.0"
+  }
+}
